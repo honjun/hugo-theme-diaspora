@@ -1,0 +1,8 @@
+<div class="nav">
+  <ul id="menu-menu" class="menu">
+    {{ range .Site.Params.menu }}
+        <li ><a target="{{ .target }}" href="{{ .link | absURL }}" class="pviewa">{{ .name }}</a></li>
+    {{ end }}
+  </ul>
+  <p>© 2019 素锦. Powered by WordPress. </p>
+</div>

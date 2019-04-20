@@ -1,0 +1,27 @@
+{{ define "main" }}
+<div id="single" class="page">
+    <div id="top">
+        <a class="icon-icon" href="javascript:history.back()"></a>
+    </div>
+    <div class="section">
+        <div class="article">
+            <div class="main">
+                <div class="content">
+                    <div class="timeline">
+                      <h1 class="timeline-title">归档: 12篇</h1>
+                        {{ range (where (where .Site.Pages "Type" "post") "Kind" "page").GroupByDate "2006" }}
+                        <h2 class="timeline-subtitle">{{ .Key }}</h2>
+                            {{ range .Pages }}
+                            <div class="timeline-item">
+                              <time>{{ .Date.Format "2006-01-02" }}</time>
+                              <a target="_self" href="{{ .Permalink }}">{{ .Title }}</a>
+                            </div>
+                            {{ end }}
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{ end }}

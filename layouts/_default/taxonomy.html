@@ -1,0 +1,13 @@
+{{ define "main" }}
+    {{- partial "header.html" . -}}
+    <div id="container">
+        {{ partial "screen" . }}
+        <div id="primary">
+            {{ partial "article_list" . }}
+        </div>
+        {{ if .Paginator.HasNext }}
+            <div id="pager"><a href="{{ .Paginator.Next.URL | absURL }}" class="more">加载更多</a></div>
+        {{ end }}
+    </div>
+    <div id="preview" ></div>
+{{ end }}

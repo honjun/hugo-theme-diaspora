@@ -1,0 +1,26 @@
+{{ define "main" }}
+<div id="single" class="page terms" style="min-height: 697px;">
+    <div id="top" style="display: block;">
+        <a class="icon-icon" href="javascript:history.back()"></a>
+    </div>
+    <div class="section">
+        <div class="article">
+            <div class="main">
+                <div class="content">
+                    <div class="set">
+                        <ul class="category-list">
+                            {{ $data := .Data }} {{ range $key, $value := .Data.Terms.ByCount }}
+                            <li class="category-list-item">
+                                <a style="text-decoration:none" class="category-list-link" href="{{ $value.Name | urlize }}">
+                                {{ $value.Name }}</a>
+                                <span class="category-list-count">{{ $value.Count }}</span>
+                            </li>
+                            {{ end }}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{ end }}

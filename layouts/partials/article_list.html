@@ -1,0 +1,33 @@
+{{ if .Paginator.HasPrev }}
+    {{ range (where .Paginator.Pages "Type" "post") }}
+        <div class="post">
+            <a data-id="6537" href="{{ .Permalink }}" title="{{ .Title }}">
+                <img width="680" height="440" src="{{ .Params.cover }}" class="cover">
+            </a>
+            <div class="else">
+                <p>{{ .Date.Format .Site.Params.date_format }}</p>
+                <h3>
+                <a data-id="6537" class="posttitle" href="{{ .Permalink }}">
+                {{ .Title }}</a>
+                </h3>
+                <p>{{ .Description }}</p>
+            </div>
+        </div>
+    {{ end }}
+{{ else }}
+    {{ range after 1 (where .Paginator.Pages "Type" "post") }}
+        <div class="post">
+            <a data-id="6537" href="{{ .Permalink }}" title="{{ .Title }}">
+                <img width="680" height="440" src="{{ .Params.cover }}" class="cover">
+            </a>
+            <div class="else">
+                <p>{{ .Date.Format .Site.Params.date_format }}</p>
+                <h3>
+                <a data-id="6537" class="posttitle" href="{{ .Permalink }}">
+                {{ .Title }}</a>
+                </h3>
+                <p>{{ .Description }}</p>
+            </div>
+        </div>
+    {{ end }}
+{{ end }}

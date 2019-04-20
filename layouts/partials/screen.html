@@ -1,0 +1,29 @@
+{{ range first 1 (where .Paginator.Pages "Type" "post") }}
+<div id="screen">
+    <div id="mark">
+        <div class="layer" data-depth="0.4">
+            <img id="cover" crossorigin="anonymous" src="{{ .Params.cover }}">
+        </div>
+    </div>
+
+    <div id="vibrant">
+        <svg viewBox="0 0 2880 1620" height="100%" preserveAspectRatio="xMaxYMax slice">
+            <polygon opacity="0.7" points="2000,1620 0,1620 0,0 600,0 " style="fill: rgb(176, 14, 36);"></polygon>
+        </svg>
+        <div style="background-color: rgb(176, 14, 36);"></div>
+    </div>
+
+    <div id="header">
+        <div>
+            <a class="icon-logo" href="/"></a>
+            <div class="icon-menu switchmenu" style="color: rgb(195, 106, 82);"></div>
+        </div>
+    </div>
+    <div id="post0">
+        <p>十一月 24, 2018</p>
+        <h2><a data-id="6643" class="posttitle" href="{{ .Permalink }}">你走了真好，不然总担心你要走</a></h2>
+        <p>最近一次苏晴产生离婚的想法，是两个月以前，天桥下买煎饼的时候。
+        老公掏零钱，不小心从裤兜里掉落一...</p>
+    </div>
+</div>
+{{ end }}

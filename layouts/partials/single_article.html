@@ -1,0 +1,108 @@
+<div id="single">
+    <div id="top" style="display: block;">
+        <div class="bar">
+        </div>
+        <a class="icon-icon" href="javascript:history.back()">
+        </a>
+        <div title="播放/暂停" class="icon-play">
+        </div>
+        <!-- <div title="查看壁纸" class="icon-images"></div> -->
+        <h3 class="subtitle" style="display: none;">
+        {{ .Title }}</h3>
+        <div class="social">
+            <div>
+                <div class="share">
+                    <a title="获取二维码" class="icon-wechat" href="javascript:;"></a>
+                </div>
+                <div id="qr"></div>
+            </div>
+        </div>
+        <div class="scrollbar" style="width: 1.1636%;"></div>
+    </div>
+    <div class="section">
+        <div class="article">
+            <div>
+                <h1 class="title">
+                {{ .Title }}</h1>
+                <div class="stuff">
+                    <!-- <span id="busuanzi_container_site_pv">阅读 <count id="busuanzi_value_site_pv"></count></span> -->
+                    <span>{{ .Date.Format .Site.Params.date_format }}</span>
+                    <span>字数 {{ .Content | countwords  }}</span>
+                    <!-- {{ $taxo := "tags" }}
+                    <ul  class="post-tags-list">
+                        {{ range .Param $taxo }}
+                            {{ $name := . }}
+                            {{ with $.Site.GetPage (printf "/%s/%s" $taxo ($name | urlize)) }}
+                                <li class="post-tags-list-item">
+                                    <a class="post-tags-list-link" href="{{ .Permalink }}">{{ $name }}</a>
+                                </li>
+                            {{ end }}
+                        {{ end }}
+                    </ul> -->
+                    <!-- {{ $taxo := "categories" }}
+                    <ul  class="post-tags-list">
+                        {{ range .Param $taxo }}
+                            {{ $name := . }}
+                            {{ with $.Site.GetPage (printf "/%s/%s" $taxo ($name | urlize)) }}
+                                <li class="post-tags-list-item">
+                                    <a class="post-tags-list-link" href="{{ .Permalink }}">{{ $name }}</a>
+                                </li>
+                            {{ end }}
+                        {{ end }}
+                    </ul> -->
+                </div>
+                <div class="content">
+                    {{ .Content }}
+                    <!--[if lt IE 9]>
+                    <script>
+                    document.createElement('audio');</script>
+                    <![endif]-->
+                    <audio id="audio" loop="1" preload="auto" style="width: 100%;" controls="controls">
+                        <source type="audio/mpeg" src="{{ .Params.mp3 }}">
+                        <a href="{{ .Params.mp3 }}">{{ .Params.mp3 }}</a>
+                    </audio>
+                </div>
+                <div class="comment-wrap">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="relate">
+        <ul>
+            <h3 id="prev_next">
+                <em>相 关 文 章</em>
+                <span>
+                    <a href="javascript: window.scrollTo(0, 0);">
+                    返回顶部</a>
+                    {{ if .PrevInSection }}
+                        <a href="{{ .PrevInSection.Permalink }}" rel="prev">上一篇</a>
+                    {{ end }}
+                    {{ if .NextInSection }}
+                        <a href="{{ .NextInSection.Permalink }}" rel="next">下一篇</a>
+                    {{ end }}
+                </span>
+            </h3>
+            {{ $series := .Params.series }}
+            {{ $title := .Title }}
+            {{ if $series }}
+                {{ range first 5 ( where .Site.Pages "Params.series" $series ) }}
+                    {{ if (ne .Title $title) }}
+                    <li>
+                        <div>
+                            <a class="relatea" href="{{ .Permalink }}" title="{{ .Title }}">
+                            {{ .Title }}</a>
+                            <p>{{ .Description }}</p>
+                        </div>
+                        <!--
+                        -->
+                        <a href="{{ .Permalink }}" title="{{ .Title }}">
+                            <img class="relateimg" src="{{ .Params.cover }}" alt="{{ .Title }}">
+                        </a>
+                    </li>
+                    {{ end }}
+                {{ end }}
+            {{ end }}
+        </ul>
+    </div>
+</div>

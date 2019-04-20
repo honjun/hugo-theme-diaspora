@@ -1,0 +1,36 @@
+{{ define "main" }}
+    {{ $context := . }}
+    
+    {{ with .Content }}
+       {{ partial "single_article.html" $context }}
+    {{ else }}
+        <div id="single" class="page">
+            <div id="top">
+                <a class="icon-icon" href="javascript:history.back()"></a>
+            </div>
+            <div class="section">
+                <div class="article">
+                    <div class="main">
+                        <div class="content">
+                            <div class="timeline">
+                              <h2 class="timeline-title">归档: 12篇</h2>
+                               
+                                <div class="archives">
+                                    {{ partial "article_list.html" $context }}
+                                </div>
+                                
+                                
+                                <!-- <div class="timeline-item">
+                                  <time>2019-03-21</time>
+                                  <a target="_self" href="/2019/convert-excel-to-markdown-table/">如何将Excel转换成Markdown表格</a>
+                                </div> -->
+                              
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {{ end }}
+{{ end }}
