@@ -5,19 +5,21 @@
     </div>
     <div class="section">
         <div class="article">
-            <div class="main">
-                <div class="content">
-                    <div class="timeline">
-                      <h1 class="timeline-title">归档: 12篇</h1>
-                        {{ range (where (where .Site.Pages "Type" "post") "Kind" "page").GroupByDate "2006" }}
-                        <h2 class="timeline-subtitle">{{ .Key }}</h2>
-                            {{ range .Pages }}
-                            <div class="timeline-item">
-                              <time>{{ .Date.Format "2006-01-02" }}</time>
-                              <a target="_self" href="{{ .Permalink }}">{{ .Title }}</a>
-                            </div>
+            <div>
+                <div class="main">
+                    <div class="content">
+                        <div class="timeline">
+                          <h2 class="timeline-title">归档: {{ len (where .Site.RegularPages "Section" "==" "post") }}篇</h2>
+                            {{ range (where (where .Site.Pages "Type" "post") "Kind" "page").GroupByDate "2006" }}
+                            <h3 class="timeline-subtitle">{{ .Key }}</h3>
+                                {{ range .Pages }}
+                                <div class="timeline-item">
+                                  <time>{{ .Date.Format "2006-01-02" }}</time>
+                                  <a target="_self" href="{{ .Permalink }}">{{ .Title }}</a>
+                                </div>
+                                {{ end }}
                             {{ end }}
-                        {{ end }}
+                        </div>
                     </div>
                 </div>
             </div>

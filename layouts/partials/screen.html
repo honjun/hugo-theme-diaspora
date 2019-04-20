@@ -20,10 +20,9 @@
         </div>
     </div>
     <div id="post0">
-        <p>十一月 24, 2018</p>
-        <h2><a data-id="6643" class="posttitle" href="{{ .Permalink }}">你走了真好，不然总担心你要走</a></h2>
-        <p>最近一次苏晴产生离婚的想法，是两个月以前，天桥下买煎饼的时候。
-        老公掏零钱，不小心从裤兜里掉落一...</p>
+        <p>{{ .Date.Format .Site.Params.date_format }}</p>
+        <h2><a title="{{ .Title }}" class="posttitle" href="{{ .Permalink }}">{{ .Title }}</a></h2>
+        <p>{{ if .Description }}{{ .Description }}{{ else }}{{ .Summary }}{{ end }}...<p>
     </div>
 </div>
 {{ end }}

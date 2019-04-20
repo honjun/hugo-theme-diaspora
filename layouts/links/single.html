@@ -1,0 +1,22 @@
+{{ define "main" }}
+<div id="single" class="page">
+    <div id="top">
+        <a class="icon-icon" href="javascript:history.back()"></a>
+    </div>
+    <div class="section">
+        <div class="article">
+            <div>
+                <div class="content">
+                    {{ .Content }}
+                </div>
+                <ul class="friend">
+                    {{ range $key, $value := .Params.links }}
+                    <li><a href="{{ $value.url }}" title="{{ $value.desc }}" target="_blank">{{ $value.name }}</a></li>
+                    {{ end }}
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</div>
+{{ end }}
