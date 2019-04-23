@@ -27,6 +27,35 @@
                 {{ .Title }}</a>
                 </h3>
                 <p>{{ if .Description }}{{ .Description }}{{ else }}{{ .Summary }}{{ end }}...</p>
+                <p class="here">
+                    <span class="icon iconfont icon-Aa">{{ .Content | countwords  }}</span>
+                    </span>
+                    {{ if .Site.Params.iconshow.tag}}
+                    {{ with .Params.Tags }}
+                    <span class="icon iconfont icon-biaoqian">
+                        {{ range . }}
+                            <a style="margin-right: 5px" class="post-tags-list-link" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>·
+                        {{ end }}
+                    </span>
+                    {{ end }}
+                    {{ end }}
+                    {{ if .Site.Params.iconshow.category}}
+                    {{ with .Params.Categories }}
+                    <span class="icon iconfont icon-dakaizhuangtai">
+                        {{ range . }}
+                            <a class="post-tags-list-link" href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+                        {{ end }}
+                    </span>
+                    {{ end }}
+                    {{ end }}
+                    {{ if .Site.Params.iconshow.series}}
+                    {{ if .Params.Series }}
+                    <span class="icon iconfont icon-book">
+                        <a class="post-tags-list-link" href="{{ "/series/" | relLangURL }}{{ .Params.series | urlize }}">{{ .Params.series }}</a>
+                    </span>
+                    {{ end }}
+                    {{ end }}
+                </p>
             </div>
         </div>
     {{ end }}
