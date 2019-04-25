@@ -119,6 +119,7 @@ links直接在`\content\links.md`下面追加
 
 ### 关于文章头
 默认格式在\archetypes\default.md，内容如下：
+
 ```yml
 ---
 # 标题 不改
@@ -143,6 +144,7 @@ keywords:
 # 文章简介 加/不加 则默认文章前50字符
 description: 
 ---
+```
 
 ## 请主题作者喝杯咖啡
 ### paypal

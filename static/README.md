@@ -3,16 +3,19 @@
 感谢WordPress主题作者[@Loeify](https://github.com/LoeiFy/Diaspora)
 
 预览：[demo](https://diaspora.hojun.cn/)
+![](https://cdn.jsdelivr.net/gh/hojun2/hojun2.github.io/img/diaspora.jpg)
 
 ## 下载安装
+```cmd
 cd <YOUR Bolg Root Dir 到你博客根目录>
 git clone git@github.com:honjun/hugo-theme-diaspora.git themes/Diaspora
+```
 
 ## 使用
 
 直接把主题下的exampleSite里面的内容剪贴到根目录覆盖替换即可。
 
-## 修改配置 只需修改改部分
+### 修改配置 只需修改改部分
 ```yml
 # 【改】 这里改你的博客网址
 baseurl = "https://hojun2.github.io"
@@ -102,11 +105,11 @@ summaryLength = 50
 # TODO
 ```
 
-## 使用about、links页面 archives请不要碰她！
+### 使用about、links页面 archives页面请不要碰她！
 
 about直接在`content\about\_index.md`修改md内容就行。
 
-links直接在下面追加
+links直接在`\content\links.md`下面追加
 ```yml
 - url: https://www.banxia.me
   name: 半夏小栈
@@ -114,7 +117,36 @@ links直接在下面追加
 ```
 这种形式的友链信息即可。
 
-## 打赏hojun 
+### 关于文章头
+默认格式在\archetypes\default.md，内容如下：
+
+```yml
+---
+# 标题 不改
+title: "{{ replace .Name "-" " " | title }}"
+# 日期 不改
+date: {{ .Date }}
+# 分类 改
+categories: 
+ - 生活
+# 系列（相关）文章 改
+series: XXX小记
+# 标签 改
+tags: 
+ - 标签一
+ - 标签二
+# 文章音乐 默认为下值 改
+mp3: http://isujin.com/wp-content/uploads/2016/01/街道的寂寞.mp3?_=1
+# 文章封面图 默认为下值 改
+cover: https://cdn.jsdelivr.net/gh/hojun2/hojun2.github.io/img/wallhaven-672007-2.jpg
+# 文章关键字 加
+keywords:
+# 文章简介 加/不加 则默认文章前50字符
+description: 
+---
+```
+
+## 请主题作者喝杯咖啡
 ### paypal
 [paypal](https://www.paypal.me/hojuncn)
 ### 左手领红包，右手打赏
