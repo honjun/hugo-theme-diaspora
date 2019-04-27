@@ -75,10 +75,5 @@ summaryLength = 50
     link   = "/tags/"
     target = ""
 
-# Enter a link for the follow button on the left
-[params.profile]
-    follow_button = "https://github.com/digitalcraftsman"
-
-
 [social]
 # TODO
