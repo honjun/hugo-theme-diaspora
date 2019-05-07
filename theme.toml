@@ -4,18 +4,18 @@
 name = "Diaspora"
 license = "MIT"
 licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE"
-description = ""
-homepage = "http://example.com/"
-tags = []
-features = []
+description = "Hugo-theme-diaspora"
+homepage = "https://diaspora.hojun.cn/"
+tags = ["blog", "ajax", "simple", "responsive", "clean"]
+features = ["blog"]
 min_version = "0.41"
 
 [author]
   name = "hojun"
-  homepage = ""
+  homepage = "https://www.hojun.cn"
 
 # If porting an existing theme
 [original]
-  name = ""
-  homepage = ""
-  repo = ""
+  name = "Diaspora"
+  homepage = "https://isujin.com/"
+  repo = "https://github.com/LoeiFy/Diaspora"
