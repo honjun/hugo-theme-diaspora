@@ -9,9 +9,5 @@ cover:
 keywords:
 description: 
 ---
-## paypal
-[paypal](https://www.paypal.me/hojuncn)
-## 左手领红包，右手打赏
-![](https://cdn.jsdelivr.net/gh/honjun/cdn@1.8/img/custom/donate/AliPayQRsmall.jpg)
-## 微信支付
-![](https://cdn.jsdelivr.net/gh/honjun/cdn@1.8/img/custom/donate/WeChanSQsmall.jpg)
+## 关于我
+巴巴爸爸吧

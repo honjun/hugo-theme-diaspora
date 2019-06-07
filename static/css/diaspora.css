@@ -15,7 +15,7 @@ body.loading:before {display:block;}
   100% {-moz-transform:scale(0.3);}
 }
 body.loading #container,body.loading #single,body.loading .nav {opacity:0;}
-html.loading,body.loading {height:100%;overflow:hidden;}
+html.loading,body.loading {height:100%;overflow:hidden;position: absolute;}
 a,a:hover {text-decoration:none;}
 img {display:block;max-width:100%;height:auto;}
 audio {display:none;visibility:hidden;opacity:0;width:0;height:0;}
@@ -349,7 +349,7 @@ pre .keyword,pre .javascript .function {color:#cc99cc;}
   url('iconfont.svg?t=1556024836329#iconfont') format('svg'); /* iOS 4.1- */
 }
 
-.iconfont {
+.iconfont,.fa{
   font-family: "iconfont", "Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -420,6 +420,10 @@ pre .keyword,pre .javascript .function {color:#cc99cc;}
 }
 
 .icon-book:before {
+  content: "\e623";
+}
+
+.fa-file:before {
   content: "\e623";
 }
 

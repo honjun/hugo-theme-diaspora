@@ -1,7 +1,7 @@
-baseurl = "https://hojun2.github.io"
+baseurl = "https://diaspora.hojun.cn"
 languageCode = "zh-CN"
 hasCJKLanguage = true
-title = "素锦"
+title = "我的hugo博客"
 theme = "Diaspora"
 themesDir = "./themes/"
 
@@ -39,7 +39,7 @@ summaryLength = 50
     disable_mathjax = false # set to true to disable MathJax
 
     # define which types of pages should be shown. By default the type with the most regular pages
-    mainSections = ["post"]
+    mainSections = ["posts"]
 
     # Format dates with Go's time formatting
     date_format = "January 2, 2006"

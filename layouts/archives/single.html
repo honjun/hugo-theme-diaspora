@@ -9,8 +9,8 @@
                 <div class="main">
                     <div class="content">
                         <div class="timeline">
-                          <h2 class="timeline-title">归档: {{ len (where .Site.RegularPages "Section" "==" "post") }}篇</h2>
-                            {{ range (where (where .Site.Pages "Type" "post") "Kind" "page").GroupByDate "2006" }}
+                          <h2 class="timeline-title">归档: {{ len (where .Site.RegularPages "Section" "==" "posts") }}篇</h2>
+                            {{ range (where (where .Site.Pages "Type" "posts") "Kind" "page").GroupByDate "2006" }}
                             <h3 class="timeline-subtitle">{{ .Key }}</h3>
                                 {{ range .Pages }}
                                 <div class="timeline-item">

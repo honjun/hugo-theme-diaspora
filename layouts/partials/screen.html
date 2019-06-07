@@ -1,4 +1,4 @@
-{{ range first 1 (where .Paginator.Pages "Type" "post") }}
+{{ range first 1 (where .Paginator.Pages "Type" "posts") }}
 <div id="screen">
     <div id="mark">
         <div class="layer" data-depth="0.4">
@@ -12,7 +12,6 @@
         </svg>
         <div style="background-color: rgb(176, 14, 36);"></div>
     </div>
-
     <div id="header">
         <div>
             <a class="icon-logo" href="/"></a>

@@ -86,7 +86,7 @@ var Diaspora = {
           history.replaceState(state, title, url)
           break
       }
-      document.title = title + '-' + siteTitle;
+      document.title = title + '-' + siteTitle
       $('#preview').html($(data).filter('#single'))
       switch (flag) {
         case 'push':
@@ -196,7 +196,6 @@ var Diaspora = {
     id.style.top = (_height - parseInt(id.style.height)) / 2 + 'px'
   }
 }
-
 $(function () {
   if (Diaspora.P()) {
     $('body').addClass('touch')
@@ -210,7 +209,6 @@ $(function () {
         $('#mark').height(window.innerHeight)
       })()
     if (cover.t.prop('complete')) {
-            // why setTimeout ?
       setTimeout(function () { cover.t.load() }, 0)
     }
     cover.t.on('load', function () {
@@ -496,6 +494,6 @@ $(function () {
   if (comment.data('ae') == true) {
     comment.click()
   }
-  console.log('%c Github %c', 'background:#24272A; color:#ffffff', '', 'https://github.com/Fechin/hexo-theme-diaspora')
+  console.log('%c Github %c', 'background:#24272A; color:#ffffff', '', 'https://github.com/honjun/hugo-theme-diaspora')
 })
 

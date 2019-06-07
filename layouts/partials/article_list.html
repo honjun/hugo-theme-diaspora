@@ -1,5 +1,5 @@
 {{ if .Paginator.HasPrev }}
-    {{ range (where .Paginator.Pages "Type" "post") }}
+    {{ range (where .Paginator.Pages "Type" "posts") }}
         <div class="post">
             <a href="{{ .Permalink }}" title="{{ .Title }}">
                 <img width="680" height="440" src="{{ .Params.cover }}" class="cover">
@@ -15,7 +15,7 @@
         </div>
     {{ end }}
 {{ else }}
-    {{ range after 1 (where .Paginator.Pages "Type" "post") }}
+    {{ range after 1 (where .Paginator.Pages "Type" "posts") }}
         <div class="post">
             <a href="{{ .Permalink }}" title="{{ .Title }}">
                 <img width="680" height="440" src="{{ .Params.cover }}" class="cover">

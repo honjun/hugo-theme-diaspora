@@ -1,0 +1,28 @@
+#search-input-wrap.on {
+    display: inline-block;
+}
+#search-input-wrap {
+    display: none;
+    padding-left: 6px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #999;
+}
+#search-input-icon {
+    color: #fff;
+    padding-right: .5em;
+    display: inline-block;
+    opacity: .7;
+}
+#search-input {
+    background: 0 0;
+    font-size: inherit;
+    font-family: Lato,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: #333;
+    outline: 0;
+    -webkit-appearance: none;
+}
+input {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
