@@ -1,7 +1,7 @@
-baseurl = "https://diaspora.hojun.cn"
+baseurl = "https://example.com"
 languageCode = "zh-CN"
 hasCJKLanguage = true
-title = "我的hugo博客"
+title = "My hugoBlog"
 theme = "Diaspora"
 themesDir = "./themes/"
 

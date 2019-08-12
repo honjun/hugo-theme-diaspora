@@ -1,13 +1,15 @@
 <div class="nav">
   <ul id="menu-menu" class="menu">
     {{ range .Site.Params.menu }}
-        <li ><a target="{{ .target }}" href="{{ .link | absURL }}" class="pviewa">{{ .name }}</a></li>
+        <li ><a target="{{ .target }}" href="{{ .link }}" class="pviewa">{{ .name }}</a></li>
     {{ end }}
     <div id="search-input-wrap" class="on">
       <div id="search-input-icon">
         <i class="fa fa-search"></i>
       </div>
-      <span class="algolia-autocomplete" style="position: relative; display: inline-block; direction: ltr;"><input type="search" id="search-input" placeholder="Search..." class="aa-input" style="position: relative; vertical-align: top;"></span>
+      <span style="position: relative; display: inline-block; direction: ltr;">
+        <input id="search-input" placeholder="Search..." style="position: relative; vertical-align: top;">
+      </span>
     </div>
     {{ partial "search" . }}
   </ul>

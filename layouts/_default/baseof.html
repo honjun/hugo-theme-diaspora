@@ -2,7 +2,9 @@
 <html>
     {{- partial "head.html" . -}}
     <body class="loading">
-        <div id="loader"></div>
+        <div id="loading"></div>
+				<div id="nav"></div>
+				<div class="nav-user"></div>
         {{- block "main" . }}{{- end }}
         {{- partial "footer.html" . -}}
     </body>

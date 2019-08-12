@@ -34,7 +34,7 @@
                     {{ with .Params.Tags }}
                     <span class="icon iconfont icon-biaoqian">
                         {{ range . }}
-                            <a style="margin-right: 5px" class="post-tags-list-link" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>·
+                            <a style="margin-right: 5px" class="post-tags-list-link" href='{{ "/tags/" | relLangURL }}{{ . | urlize }}'>{{ . }}</a>
                         {{ end }}
                     </span>
                     {{ end }}

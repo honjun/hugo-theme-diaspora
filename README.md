@@ -1,178 +1,168 @@
-# hugo-theme-diaspora
-## 基于WordPress主题diaspora移植的Hugo主题
-感谢WordPress主题作者[@Loeify](https://github.com/LoeiFy/Diaspora)
+# Hugo-theme-diaspora
+## Port of WordPress theme diaspora to Hugo. [中文文档](https://github.com/honjun/hugo-theme-diaspora/REAAME-zn.md)
+Thanks to WordPress theme author @Loeify
 
-预览：[demo](https://diaspora.hojun.cn/)
+Preview: [demo](https://diaspora.hojun.cn/)
 ![](https://cdn.jsdelivr.net/gh/hojun2/hojun2.github.io/img/diaspora.jpg)
 
-## 交流群
-若你是使用者，加群QQ: 801511924
+## QQ group
+If you are a user, plus group QQ: 801511924
 
-若你是创作者，加群QQ: 194472590
+If you are a creator, plus group QQ: 194472590
 
-## 下载安装
-```cmd
-cd <YOUR Bolg Root Dir 到你博客根目录>
-git clone git@github.com:honjun/hugo-theme-diaspora.git themes/Diaspora
-```
+##  Download and install
+Cd  < YOUR Bolg Root Dir to your blog root directory > 
+git clone git @ github.com:honjun/hugo-theme-diaspora.git themes/Diaspora
+## use
+Simply cut the contents of the exampleSite under the theme to the root directory to replace the replacement.
 
-## 使用
-
-直接把主题下的exampleSite里面的内容剪贴到根目录覆盖替换即可。
-
-### 修改配置 只需修改改部分
+### Modify the configuration, just modify the changes.
 ```yml
-# 【改】 这里改你的博客网址
-baseurl = "https://hojun2.github.io"
-# 【不改】 语言设置中文 
-languageCode = "zh-CN"
-# 【不改】 如果使用了中文/日文/韩文语言。请设置为true，才能使.Summary和.WordCount正确执行
-hasCJKLanguage = true
-# 【改】 网站标题
-title = "素锦"
-# 【不改】 主题名称
-theme = "Diaspora"
-# 【不改】 主题目录
-themesDir = "./themes/"
-# 【不改】 设置list分页页面的条目数，默认10
-paginate = 10
-# 【不改】 禁用把目录改小写
-disablePathToLower = true
-# 【不改】 设置自动摘要（summary）的字符数为50 只有文章description为空才会使用summary自动获取文章前50字符为摘要。
-summaryLength = 50
+# [Change] Change your blog URL 
+baseurl = "https://hojun2.github.io" 
+# [Do not change] Language setting Chinese 
+languageCode = "zh-CN" 
+# [Do not change] If Chinese/Japanese/ Korean language. Please set to true in order for .Summary and .WordCount to execute correctly. 
+hasCJKLanguage = true 
+# [Change] Site title 
+title = "素锦" 
+# [Do not change] Theme name 
+theme = "Diaspora" 
+# [Do not change] Theme directory 
+themesDir = "./themes/" 
+# [Do not change] Set the number of entries in the list page, the default 10 
+paginate = 10 
+# [Do not change] Disable the directory to lowercase 
+disablePathToLower = true 
+# [Do not change] Set the automatic summary (summary) characters The number is 50. If the article description is empty, the summary will automatically use the first 50 characters of the article as the summary. 
+summaryLength = 50 
 
-# 【自定义】 设置list页面的图标显示 其中字数默认显示 true/false 显示/不显示
-[params.iconshow]
-    # 显示分类
-    category = true
-    # 不显示系列（相关）
-    series = false
-    # 显示标签
-    tag = true
+# [Custom] Set the icon of the list page to display the number of words in the default display true/false display / not display
+[params.iconshow] 
+    # display classification 
+    category to true = 
+    # is not displayed series (related) 
+    Series to false = 
+    # display tag 
+    Tag to true = 
 
-# 【不改】 设置分类 category tag series
-[taxonomies]
-  category = "categories"
-  tag = "tags"
-  series = "series"
-# 【不改】 生成链接配置
-[permalinks]
-    post = "/:year/:month/:day/:slug"
-# 【改】 个人参数 怎么改 略，这应该要会了。
-[params]
-    # Tell me who you are
-    author = "hojun"
-    bio = "Blogger - Programmer - Gopher"
-    location = "Earth"
-    site_description = "hojun的hugo静态博客"
-    copyright  = "Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice)."
-    avatar = "css/images/avatar.png"
-    # Enter your email address to display your Gravatar icon in the profile. If not set the theme
-    # will fallback to the avatar.
-    gravatar = "you@example.com"
-    logo = "css/images/logo.png"
-    disable_mathjax = false # set to true to disable MathJax
+# [] does not change the Classification Tag Series category 
+[Taxonomies] 
+  category = "the Categories" 
+  Tag = "Tags" 
+  Series = "series" 
+# [Do not change] Generate link configuration 
+[permalinks] 
+    post = "/:year/:month/:day/:slug" 
+# [Change] How to change the personal parameters, this should be. 
+[params] 
+    # Tell me who you are 
+    author = "hojun" 
+    bio = "Blogger - Programmer - Gopher" 
+    location = "Earth" 
+    site_description = "hojun's hugo static blog"
+    Copyright = "Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice)." 
+    avatar = "css/images/avatar.png" 
+    # Enter your email address To display your Gravatar icon in the profile. If not set the theme 
+    # will fallback to the avatar. 
+    gravatar = "you@example.com" 
+    logo = "css/images/logo.png" 
+    disable_mathjax = false # set to true to disable MathJax 
 
-    # define which types of pages should be shown. By default the type with the most regular pages
-    mainSections = ["post"]
+    # define which types of pages should be shown. By default the type with the most regular pages 
+    mainSections = ["post"] 
 
-    # Format dates with Go's time formatting
-    date_format = "January 2, 2006"
+    # Format dates Go's time formatting 
+    date_format = "January 2, 2006" 
 
-    # Add custom assets with their paths relative to the static folder
-  custom_css = []
-  custom_js  = []
+    #Add custom assets with their paths relative to the static folder 
+  custom_css = [] 
+  custom_js = [] 
 
-# 【自定义】 导航栏菜单配置
-[[params.menu]]
-    name   = "About"
-    link   = "/about/"
-    target = "_blank"
-[[params.menu]]
-    name   = "Links"
-    link   = "/links/"
-    target = ""
-[[params.menu]]
-    name   = "Archives"
-    link   = "/archives/"
-    target = ""
-[[params.menu]]
-    name   = "Categories"
-    link   = "/categories/"
-    target = ""
-[[params.menu]]
-    name   = "Tags"
-    link   = "/tags/"
-    target = ""
+# [custom] navigation bar menu configuration 
+[[params.menu]] 
+    name = "About" 
+    link = "/about/" 
+    target = " _blank" 
+[[params.menu]] 
+    name = "Links" 
+    link = "/links/" 
+    target = "" 
+[[params.menu]] 
+    name = "Archives" 
+    link = "/archives/" 
+    target = "" 
+[[ Params.menu]] 
+    name = "Categories" 
+    link = "/categories/" 
+    target = "" 
+[[params.menu]] 
+    name = "Tags" 
+    link = "/tags/" 
+    target = "" 
 
 
-[social]
+[social] 
 # TODO
 ```
+### about, links page 
+About directly content\about\_index.mdmodify the md content.
 
-### 使用about、links页面 archives页面请不要碰她！
-
-about直接在`content\about\_index.md`修改md内容就行。
-
-links直接在`\content\links.md`下面追加
+Links directly \content\links.mdadded below
 ```yml
-- url: https://www.banxia.me
-  name: 半夏小栈
-  desc: 半夏小栈
+- url : https://www.banxia.me 
+  name : Pinellia small stack 
+  desc : Pinellia small stack
 ```
-这种形式的友链信息即可。
+This form of friendship information can be.
 
-### 关于文章头
-默认格式在\archetypes\default.md，内容如下：
+### About the article header
+The default format is \archetypes\default.md and the content is as follows:
 
 ```yml
 ---
-# 标题 不改
-title: "{{ replace .Name "-" " " | title }}"
-# 日期 不改
-date: {{ .Date }}
-# 分类 改
-categories: 
- - 生活
-# 系列（相关）文章 改
-series: XXX小记
-# 标签 改
-tags: 
- - 标签一
- - 标签二
-# 文章音乐 默认为下值 改
-mp3: http://isujin.com/wp-content/uploads/2016/01/街道的寂寞.mp3?_=1
-# 文章封面图 默认为下值 改
-cover: https://cdn.jsdelivr.net/gh/hojun2/hojun2.github.io/img/wallhaven-672007-2.jpg
-# 文章关键字 加
-keywords:
-# 文章简介 加/不加 则默认文章前50字符
-description: 
+ # title does not change the 
+title : " {{.Name the replace " - "" "| title}}" 
+# date does not change 
+DATE : {{}} .date 
+# classification change 
+the Categories : 
+ - Life 
+# series (related) Articles Change 
+series : XXX 小记
+# tag change 
+tags : 
+ - tag one 
+ - tag two 
+# article music default to the next value change 
+mp3 : http://isujin.com/wp-content/uploads/2016/01/ street loneliness.mp3 ? _ = 1 
+# articles cover art for the next value to change the default 
+cover :Https://cdn.jsdelivr.net/gh/hojun2/hojun2.github.io/img/wallhaven-672007-2.jpg 
+#文章Keyword plus 
+keywords :
+ #文章介绍加/不加是default article first 50 characters 
+description : 
 ---
 ```
-
-## 2019.6.站内搜索
-感谢[lunr.js](https://github.com/olivernn/lunr.js)和[hugo-lunr](https://github.com/dgrigg/hugo-lunr)。
-本插件基于hugo-lunr修改，仅适配hugo-theme-diaspora主题，其他主题需自行修改。
-先安装插件（需要安装npm工具）
+##  2019.6 Update.  Site search
+Thanks to lurr.js and hugo-lunr . This plugin is modified based on hugo-lunr and only adapts to the hugo-theme-diaspora theme. Other topics need to be modified. Install the plugin first (requires the npm tool to be installed)
 ```cmd
 npm i hugo-lunr-diaspora
 ```
-然后在博客根目录下新建package.json，增加如下内容
+Then create a new package.json in the root of the blog, add the following content
 ```json
 {
-  "scripts": {
-    "index": "hugo-lunr"
-  }
+   " scripts " : {
+     " index " : " hugo-lunr " 
+  } 
 }
 ```
-最后cd到博客根目录下运行`npm run index`生成lunr.json文件即可以使用站内搜索。
-注意更新文章后需要更新lunr.json文件
+Finally, cd to the blog root directory to run the npm run indexgenerated lurr.json file can use the site search. Note that you need to update the lurr.json file after updating the article.
 
-## 请主题作者喝杯咖啡
-### paypal
+## Ask the subject author for a cup of coffee
+### Paypal
 [paypal](https://www.paypal.me/hojuncn)
-### 左手领红包，右手打赏
+### Left hand collar red envelope, right hand reward
 ![](https://cdn.jsdelivr.net/gh/honjun/cdn@1.8/img/custom/donate/AliPayQRsmall.jpg)
-### 微信支付
+### WeChat payment
 ![](https://cdn.jsdelivr.net/gh/honjun/cdn@1.8/img/custom/donate/WeChanSQsmall.jpg)

@@ -8,15 +8,8 @@
   <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} &middot; {{ .Site.Title }}{{ end }}</title>
   <meta name="keywords" content="素锦, inspiration, customization, rainmeter, design, web, 壁纸, 设计, 收集, wallpaper, collection, jaku, icon">
   <meta name="description" content="世界上每个角落都有人过着相似的人生">
-  <meta name="author" content="LoeiFy">
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://isujin.com/wp-content/themes/Diaspora/images/144.png">
-  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://isujin.com/wp-content/themes/Diaspora/images/114.png">
-  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://isujin.com/wp-content/themes/Diaspora/images/72.png">
-  <link rel="apple-touch-icon-precomposed" href="https://isujin.com/wp-content/themes/Diaspora/images/57.png">
-  <link rel="icon" type="image/png" href="https://isujin.com/wp-content/themes/Diaspora/images/32.png">
-  <style>
- /* .image-logo{background-image:url(https://isujin.com/wp-content/themes/Diaspora/images/logo.png)}body.mu .image-logo{background-image:url(https://isujin.com/wp-content/themes/Diaspora/images/logo_black.png)}.image-icon{background-image:url(https://isujin.com/wp-content/themes/Diaspora/images/logo_min.png)}*/
-  </style>
+  <meta name="author" content="{{ .Site.Params.author }}">
+  <link rel="icon" type="image/png" href="{{ .Site.Params.favicon }}">
   <link rel="stylesheet" href="/css/diaspora.css">
   <link rel="stylesheet" href="/css/insight.css">
   <link rel="stylesheet" href="/css/custom.css">
