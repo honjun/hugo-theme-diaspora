@@ -361,6 +361,10 @@ pre .keyword,pre .javascript .function {color:#cc99cc;}
 }
 .icon-logo:before {
     content: "\e60d";
+    /*display: block;
+    height: 100px;
+    width: 100px;
+    background: url('/img/32.png') no-repeat center;*/
 }
 .icon-menu {
     font-size: 20px;
